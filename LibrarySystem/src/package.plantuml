@@ -1,0 +1,65 @@
+@startuml
+
+!theme plain
+top to bottom direction
+skinparam linetype ortho
+
+class Book {
+  + Book(String, String, int, int, String): 
+  + Book(): 
+  - title: String
+  - publicationYear: int
+  - available: boolean
+  - author: String
+  - publisher: String
+  - numberPages: int
+}
+class Dvd {
+  + Dvd(String, String, String, int): 
+  + Dvd(): 
+  - available: boolean
+  - movieMinutesDuration: int
+  - movieGenre: String
+  - title: String
+  - author: String
+}
+class Item {
+  + Item(): 
+  - author: String
+  - available: boolean
+  - title: String
+}
+class Loan {
+  + Loan(): 
+  + Loan(User, Item): 
+  - item: Item
+  - maxReturnDate: LocalDate
+  - loanDate: LocalDate
+  - user: User
+  - returnDate: LocalDate
+}
+class Magazine {
+  + Magazine(String, String, String, int): 
+  + Magazine(): 
+  - publisher: String
+  - author: String
+  - title: String
+  - editionNumber: int
+  - available: boolean
+}
+class User {
+  + User(String, String, String): 
+  + User(): 
+  - address: String
+  - name: String
+  - borrowedItems: List<Item>
+  - email: String
+}
+
+Book      -[#000082,plain]-^  Item     
+Dvd       -[#000082,plain]-^  Item     
+Loan     "1" *-[#595959,plain]-> "item\n1" Item     
+Loan     "1" *-[#595959,plain]-> "user\n1" User     
+Magazine  -[#000082,plain]-^  Item     
+User     "1" *-[#595959,plain]-> "borrowedItems\n*" Item     
+@enduml

@@ -1,6 +1,7 @@
 import entities.*;
 
 public class Main {
+
     public static void main(String[] args) {
         Book harryPotter = new Book("Harry Potter", "J. K Rowling", 2000, 200, "Rocco");
         Book bible = new Book("Biblia Sagrada", "Sociedade Biblica do Brasil", 2018, 100,"SBB" );
