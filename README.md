@@ -16,7 +16,7 @@ Projeto implementando um sistema de gerenciamento de uma biblioteca visando a pr
 - `Funcionalidade 2` `Cadastro de Usuarios`: O sistema permite o cadastro de usuários para que os mesmos possam realizar emprestimos de itens.
 - `Funcionalidade 3` `Gerenciamento de Emprestimos`: Para realizar um empréstimo é necessário passar o usuário e o item desejado. Se o item estiver disponivel, o mesmo é adicionado a lista de objetos emprestados ao usuario, é guardado a data de emprestimo e a data maxima de devolução. Se não estiver disponível é mostrado a data que é esperada a devoluçao do item.
 - `Funcionalidade 4` `Imprimir itens emprestados`: Toda vez que um usuário realiza o emprestimo de um item é exibido no terminal sua lista de itens emprestados.
-- `Funcionalidade 3` `Devolução de itens: Ao devolver um item, o item é retirado da lista de itens do usuário, é guardada a data de devolução e o item volta a estar disponível para emprestimo`
+- `Funcionalidade 5` `Devolução de itens`: Ao devolver um item, o item é retirado da lista de itens do usuário, é guardada a data de devolução e o item volta a estar disponível para emprestimo
 
 ## ✔️ Técnicas e tecnologias utilizadas
 
