@@ -20,7 +20,7 @@ Projeto implementando um sistema de gerenciamento de uma biblioteca visando a pr
 
 ## ✔️ Técnicas e tecnologias utilizadas
 
-- ``Java 1``
+- ``Java 19``
 - ``InteliJ IDEA``
 - ``Paradigma de orientação a objetos``
 
