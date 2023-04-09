@@ -50,34 +50,4 @@ public class User {
         this.borrowedItems = borrowedItems;
     }
 
-    public void borrowItem (Item item){
-        if(item.available) {
-            borrowedItems.add(item);
-            item.setAvailable(false);
-            showBorrowedItems();
-        } else System.out.println("O item " +item.title+ " nao esta disponivel");
-    }
-
-    public void returnItem (Item item) {
-        borrowedItems.removeIf(object -> {
-            try {
-                return object.equals(item);
-            } catch (Exception e) {
-                System.out.println("Removing item error");
-                e.printStackTrace();
-                return false;
-            }
-        });
-        showBorrowedItems();
-    }
-
-    public void showBorrowedItems(){
-        Iterator<Item> iterator = borrowedItems.listIterator();
-        System.out.println("Lista de Itens Emprestados para " +name+ ":");
-        while (iterator.hasNext()){
-            System.out.println(iterator.next().title);
-        }
-    }
-
-
 }
