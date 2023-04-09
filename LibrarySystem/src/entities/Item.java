@@ -2,31 +2,19 @@ package entities;
 
 public abstract class Item {
 
-    String title, author;
-    boolean available = true;
+    private String title, author;
+    private boolean available = true;
 
-    public String getTitle() {
-        return title;
-    }
+    public abstract String getTitle();
 
-    public void setTitle(String title) {
-        this.title = title;
-    }
+    public abstract void setTitle(String title);
 
-    public String getAuthor() {
-        return author;
-    }
+    public abstract String getAuthor();
 
-    public void setAuthor(String author) {
-        this.author = author;
-    }
+    public abstract void setAuthor(String author);
 
-    public boolean isAvailable() {
-        return available;
-    }
+    public abstract boolean isAvailable();
 
-    public void setAvailable(boolean available) {
-        this.available = available;
-    }
+    public abstract void setAvailable(boolean available);
 
 }

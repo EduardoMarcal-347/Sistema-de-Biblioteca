@@ -2,12 +2,14 @@ package entities;
 
 public class Book extends Item {
 
+    private String title, author;
+    private boolean available = true;
     private int publicationYear, numberPages;
     private String publisher;
 
-
     public Book(String title, String author, int publicationYear, int numberPages, String publisher) {
-        super(title, author);
+        this.title = title;
+        this.author = author;
         this.publicationYear = publicationYear;
         this.numberPages = numberPages;
         this.publisher = publisher;
@@ -40,4 +42,33 @@ public class Book extends Item {
         this.publisher = publisher;
     }
 
+    @Override
+    public String getTitle() {
+        return title;
+    }
+
+    @Override
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    @Override
+    public String getAuthor() {
+        return author;
+    }
+
+    @Override
+    public void setAuthor(String author) {
+        this.author = author;
+    }
+
+    @Override
+    public boolean isAvailable() {
+        return available;
+    }
+
+    @Override
+    public void setAvailable(boolean available) {
+        this.available = available;
+    }
 }

@@ -2,11 +2,14 @@ package entities;
 
 public class Dvd extends Item {
 
-    String movieGenre;
-    int movieMinutesDuration;
+    private String title, author;
+    private boolean available = true;
+    private String movieGenre;
+    private int movieMinutesDuration;
 
     public Dvd(String title, String author, String movieGenre, int movieMinutesDuration) {
-        super(title, author);
+        this.title = title;
+        this.author = author;
         this.movieGenre = movieGenre;
         this.movieMinutesDuration = movieMinutesDuration;
     }
@@ -28,6 +31,36 @@ public class Dvd extends Item {
 
     public void setMovieMinutesDuration(int movieMinutesDuration) {
         this.movieMinutesDuration = movieMinutesDuration;
+    }
+
+    @Override
+    public String getTitle() {
+        return title;
+    }
+
+    @Override
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    @Override
+    public String getAuthor() {
+        return author;
+    }
+
+    @Override
+    public void setAuthor(String author) {
+        this.author = author;
+    }
+
+    @Override
+    public boolean isAvailable() {
+        return available;
+    }
+
+    @Override
+    public void setAvailable(boolean available) {
+        this.available = available;
     }
 
 }
