@@ -16,25 +16,27 @@ public class Main {
         User fernanda = new User("Fernanda", "fernanda@gmail.com", "Rua 34");
 
         //usuarios pegando e devolvendo itens, a cada ação é mostrado no terminal a lista de itens emprestados do usuario
-        eduardo.borrowItem(harryPotter);
-        eduardo.borrowItem(spiderman);
-        eduardo.borrowItem(recreio);
-        eduardo.returnItem(recreio);
-        eduardo.returnItem(spiderman);
-        samuel.borrowItem(bible);
-        samuel.borrowItem(tropaDeElite);
-        samuel.borrowItem(baar);
+        Loan emprestimo1 = new Loan(eduardo, harryPotter);
+        Loan emprestimo2 = new Loan(eduardo, spiderman);
+        Loan emprestimo3 = new Loan(eduardo, recreio);
+        emprestimo3.returnItem();
+        emprestimo2.returnItem();
 
-        //será mostrado no terminal que o item não está disponivel
-        samuel.borrowItem(harryPotter);
+        Loan emprestimo4 = new Loan(samuel, bible);
+        Loan emprestimo5 = new Loan(samuel, tropaDeElite);
+        Loan emprestimo6 = new Loan(samuel, baar);
 
-        samuel.returnItem(baar);
-        samuel.returnItem(tropaDeElite);
-        fernanda.borrowItem(hobbit);
-        fernanda.borrowItem(percyJackson);
-        fernanda.borrowItem(vogue);
-        fernanda.returnItem(hobbit);
-        fernanda.returnItem(percyJackson);
+        //será exibido no terminal que o item não está disponivel
+        Loan emprestimo7 = new Loan(samuel, harryPotter);
+
+        emprestimo6.returnItem();
+        emprestimo5.returnItem();
+
+        Loan emprestimo8 = new Loan(fernanda, hobbit);
+        Loan emprestimo9 = new Loan(fernanda, percyJackson);
+        Loan emprestimo10 = new Loan(fernanda, vogue);
+        emprestimo8.returnItem();
+        emprestimo9.returnItem();
 
     }
 }

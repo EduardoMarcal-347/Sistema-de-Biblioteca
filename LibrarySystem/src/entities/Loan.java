@@ -14,6 +14,7 @@ public class Loan {
     public Loan(User user, Item item) {
         this.user = user;
         this.item = item;
+        borrowItem();
     }
 
     public Loan() {
@@ -56,12 +57,16 @@ public class Loan {
             user.getBorrowedItems().add(item);
             item.setAvailable(false);
             showBorrowedItems();
-        } else System.out.println("O item " +item.getTitle()+ " nao esta disponivel");
+        } else {
+            System.out.println("O item " + item.getTitle() + " nao esta disponivel, voltará a estar disponivel em: "+
+                     maxReturnDate);
+        }
     }
 
-    public void returnItem (Item item) {
+    public void returnItem () {
         user.getBorrowedItems().removeIf(object -> {
             try {
+                returnDate = LocalDate.now();
                 return object.equals(item);
             } catch (Exception e) {
                 System.out.println("Removing item error");
